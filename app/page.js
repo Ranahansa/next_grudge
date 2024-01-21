@@ -1,10 +1,6 @@
-"use client";
 export default function Home() {
 
-    const addGrudge = (e) => {
-      e.preventDefault();
-      // Add your logic to handle the form submission here
-    };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full p-4 bg-white rounded shadow-md md:p-8 md:w-96">
