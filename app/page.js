@@ -1,5 +1,7 @@
 import { addGrudge } from "./actions/createGrudge";
-export default function Home() {
+export default async function Home() {
+  
+  const {rows} = await sql`SELECT * FROM Grudges`
 
 
   return (
@@ -26,6 +28,13 @@ export default function Home() {
             Add Grudge
           </button>
         </form>
+        <div className="p-4 mt-4">
+          {
+            rows.map((grudge, index) => (
+              <div key={index} className="p-2 mt-2 text-black bg-gray-600 rounded-md shadow">{grudge.name}</div>
+            ))
+          }
+        </div>
       </div>
     </div>
   );
