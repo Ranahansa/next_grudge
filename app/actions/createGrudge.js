@@ -12,7 +12,7 @@ export async function addGrudge(formData){
 
     }catch(error){
         console.log(error);
-        return {status: 500, body: {error: error.message}};
+        return {status: 500};
     }
     return {status: 200, body: {message: 'Grudge added'}};
 }

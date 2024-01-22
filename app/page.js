@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full p-4 bg-white rounded shadow-md md:p-8 md:w-96">
-        <form onSubmit={addGrudge}>
+        <form action={addGrudge}>
           <label
             htmlFor="grudgeName"
             className="block text-sm font-medium text-gray-700"
@@ -17,7 +17,7 @@ export default function Home() {
             name="grudgeName"
             id="grudgeName"
             placeholder="Name of Grudge"
-            className="w-full p-2 mt-1 border rounded focus:outline-none focus:border-blue-500"
+            className="w-full p-2 mt-1 text-black border rounded focus:outline-none focus:border-blue-500"
           />
           <button
             type="submit"
