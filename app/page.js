@@ -1,3 +1,4 @@
+import { sql } from "@vercel/postgres";
 import { addGrudge } from "./actions/createGrudge";
 export default async function Home() {
   
