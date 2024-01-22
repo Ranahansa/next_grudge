@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-teal-400 to-blue-500">
       <div className="w-full p-4 bg-white rounded-md shadow-md md:p-8 md:w-96">
-        <form onSubmit={addGrudge} className="space-y-4">
+        <form action={addGrudge} className="space-y-4">
           <label
             htmlFor="grudgeName"
             className="block text-lg font-semibold text-gray-700"
