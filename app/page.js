@@ -1,5 +1,6 @@
 import { sql } from "@vercel/postgres";
 import { addGrudge } from "./actions/createGrudge";
+import SubmitButton from "./components/SubmitButton";
 export default async function Home() {
   
   const {rows} = await sql`SELECT * FROM Grudges`
@@ -22,12 +23,7 @@ export default async function Home() {
             placeholder="Name of Grudge"
             className="w-full p-2 mt-1 text-black border rounded focus:outline-none focus:border-blue-500"
           />
-          <button
-            type="submit"
-            className="w-full p-2 mt-4 text-white bg-blue-500 rounded md:w-auto hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue"
-          >
-            Add Grudge
-          </button>
+          <SubmitButton />
         </form>
         <div className="p-4 mt-4">
           {
